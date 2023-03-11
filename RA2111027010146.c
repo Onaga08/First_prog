@@ -1,18 +1,22 @@
 #include <stdio.h>
-
-int main()
-{
-    int a;
-    printf("Enter Pradyumn's Marks Out of 5");
-    scanf ("%d", &a);
-    if (a == 5) {
-        printf ("I Aced it!");
-    }
-    else if (a != 5 && a<6) {
-        printf ("Little More Marks Sir, Please!");
-    }
-    else {
-        printf ("Invalid Input");
-    }
+#include <string.h>
+#include <math.h>
+int square (int a){
+    return a*a;
+}
+int cube (int a){
+    return a*a*a;
+}
+int power (int a, int b){
+    return pow(a, b);
+}
+int main(){
+    int a,b,c;
+    printf("Enter number and exponent: ");
+    scanf("%d %d", &a, &b);
+    if(b == 2) c = square(a);
+    else if(b == 2) c = cube(a);
+    else c = power(a, b);
+    printf("The resultant number is: %d", c);
     return 0;
 }
